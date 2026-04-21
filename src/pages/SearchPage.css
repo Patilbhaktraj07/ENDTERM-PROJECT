@@ -1,0 +1,31 @@
+.search-page {
+  max-width: 1400px;
+}
+
+.search-page-input-wrapper {
+  margin-bottom: 24px;
+}
+
+.search-page-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.search-page-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.search-page-empty svg {
+  animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .search-page-results {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,150 @@
+.watchlist {
+  max-width: 1400px;
+}
+
+.watchlist .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Watchlist Grid */
+.wl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.wl-card {
+  padding: 22px;
+  transition: var(--transition-spring);
+}
+
+.wl-card:hover {
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.wl-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.wl-card-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: 6px;
+}
+
+.wl-card-sector {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.wl-remove-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: var(--transition-spring);
+}
+
+.wl-remove-btn:hover {
+  background: var(--red-bg);
+  color: var(--red);
+  transform: scale(1.1);
+}
+
+.wl-card-chart {
+  margin: 12px 0;
+  padding: 4px 0;
+  border-radius: 8px;
+  background: rgba(var(--card-bg-rgb), 0.3);
+}
+
+.wl-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.wl-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.wl-card-metrics {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--border-light);
+  padding-top: 12px;
+}
+
+.wl-card-metric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+}
+
+.wl-card-metric:first-child {
+  border-right: 1px solid var(--border-light);
+}
+
+.wl-card-metric span:first-child {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wl-card-metric span:last-child {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Empty State */
+.wl-empty {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.wl-empty svg {
+  animation: float 3s ease-in-out infinite;
+}
+
+.wl-empty h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.wl-empty p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .wl-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,177 @@
+.simulator {
+  max-width: 1000px;
+}
+
+.sim-input-panel {
+  padding: 28px;
+}
+
+.sim-input-panel::before {
+  opacity: 1 !important;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.sim-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 20px;
+  align-items: end;
+}
+
+.sim-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sim-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.sim-select,
+.sim-input {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  background: rgba(var(--card-bg-rgb), 0.5);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.sim-select:focus,
+.sim-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12), var(--shadow-glow);
+  background: rgba(var(--card-bg-rgb), 1);
+}
+
+.sim-presets {
+  display: flex;
+  gap: 6px;
+}
+
+.sim-preset {
+  padding: 8px 16px;
+  border-radius: var(--radius-xs);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  transition: var(--transition-spring);
+}
+
+.sim-preset:hover {
+  color: var(--primary);
+  background: var(--primary-lighter);
+}
+
+.sim-preset.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.sim-run-btn {
+  height: 42px;
+  white-space: nowrap;
+}
+
+/* Result Cards */
+.sim-result-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sim-result-card {
+  padding: 24px;
+  text-align: center;
+}
+
+.sim-result-card.highlight {
+  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: var(--shadow), var(--shadow-glow);
+}
+
+.sim-result-card.highlight::before {
+  opacity: 1;
+}
+
+.sim-rc-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.sim-rc-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.sim-rc-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.sim-rc-sub {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Placeholder */
+.sim-placeholder {
+  margin-top: 24px;
+  padding: 60px 40px;
+}
+
+.sim-placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.sim-placeholder-content h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sim-placeholder-content p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+.sim-placeholder-content svg {
+  animation: float 3s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .sim-inputs {
+    grid-template-columns: 1fr;
+  }
+  .sim-result-cards {
+    grid-template-columns: 1fr;
+  }
+}
